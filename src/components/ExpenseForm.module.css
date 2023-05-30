@@ -1,0 +1,94 @@
+.firstRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.formWrapper {
+    background-color: white;
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.inputsWrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.menuWrapper {
+    align-items: flex-end;
+    display: flex;
+}
+
+.selectWrapper {
+    border-radius: 5px;
+    height: 32px;
+}
+
+.currencyWrap {
+    display: flex;
+    flex: 1;
+    height: 32px;
+    background-color: #ffffff;
+    border: 1px solid #7b7b93;
+    border-radius: 5px;
+}
+
+.currentWrapInput {
+    flex: 1;
+}
+
+.currencyCode {
+    position: relative;
+    color: #7b7b93;
+    padding: 5px 0 5px 5px;
+}
+
+.secondRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.desWrapper {
+    width: 100%;
+    height: 32px;
+    border-radius: 5px;
+}
+
+.buttonStyle {
+    border-radius: 15px;
+    padding: 3px 13px;
+    background-color: aqua;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.beforeBottomStyle {
+    border-radius: 15px;
+    padding: 3px 13px;
+    background-color: white;
+}
+
+.beforeUpdateStyle {
+    border-radius: 15px;
+    padding: 3px 13px;
+    background-color: blue;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.bottomButtonWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonAlignment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

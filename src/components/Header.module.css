@@ -1,0 +1,13 @@
+.mainWrapper {
+    background-color: skyblue;
+    padding: 25px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.descWrapper {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}

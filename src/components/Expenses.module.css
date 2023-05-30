@@ -1,0 +1,51 @@
+.buttonStyle {
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.itemWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemAlignment {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.firstBox {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.secondBox {
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.thirdBox {
+    background-color: skyblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
