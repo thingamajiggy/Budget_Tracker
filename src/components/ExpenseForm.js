@@ -3,6 +3,7 @@ import { ExpenseContext } from './ExpenseProvider';
 import { v4 as uuidv4 } from 'uuid';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import styles from './ExpenseForm.module.css';
+import Select from 'react-select';
 
 export const ExpenseForm = () => {
     const options = [
@@ -27,8 +28,10 @@ export const ExpenseForm = () => {
     const { items, setItems, editingItem, setEditingItem } = useContext(ExpenseContext)
     const [selected, setSelected] = useState(options[0].value);
     const [cost, setCost] = useState("");
-    const [description, setDescription] = useState("")
-    const [viewForm, setViewForm] = useState(false)
+    const [description, setDescription] = useState("");
+    const [viewForm, setViewForm] = useState(false);
+    const [viewDescription, setViewDescription] = useState(false);
+
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -83,14 +86,14 @@ export const ExpenseForm = () => {
                     <div className={styles.menuWrapper}>
                         <div className={styles.inputsWrapper}>
                             <div className={styles.firstRow}>
-                                <select value={selected} onChange={(event) => {
+                                <Select defaultValue={selected} onChange={(event) => {
                                     setSelected(event.target.value)
-                                }} className={styles.selectWrapper}>
+                                }} className={styles.selectWrapper} options={options}>
                                     {options.map((option) => (<option key={option.value} value={option.value}>{option.label}</option>))}
-                                </select>
+                                </Select>
                                 <div className={styles.currencyWrap}>
                                     <span className={styles.currencyCode}>£</span>
-                                    <input classname={styles.currentWrapInput} required="required" type="currency-field" placeholder="amount" value={cost} onChange={(event) => setCost(event.target.value)} />
+                                    <input classname={styles.currentWrapInput} required="required" type="currency-field" placeholder="amount" value={cost} onChange={(event) => setCost(event.target.value)} maxlength="100" />
                                 </div>
 
                             </div>
