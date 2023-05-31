@@ -1,6 +1,6 @@
 .buttonStyle {
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--white);
     border: none;
     padding: 5px 10px;
 }
@@ -10,6 +10,12 @@
     align-items: center;
 }
 
+.deleteWrapper {
+    margin-left: 5px;
+    border: none;
+    background: var(--hawkes-blue);
+}
+
 .itemWrapper {
     display: flex;
     flex-direction: row;
@@ -17,17 +23,24 @@
 }
 
 .itemAlignment {
+    border: 0;
     display: flex;
-    background-color: white;
+    background-color: var(--white);
     width: 100%;
     justify-content: space-between;
     padding: 15px 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    transition: .4s;
+}
+
+.itemAlignment:hover {
+    background-color: var(--concrete);
 }
 
 .firstBox {
-    background-color: white;
+    background-color: transparent;
+    color: var(--cape-cod);
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -35,7 +48,8 @@
 }
 
 .secondBox {
-    background-color: skyblue;
+    background-color: var(--hawkes-blue);
+    color: var(--dodger-blue);
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -43,7 +57,8 @@
 }
 
 .thirdBox {
-    background-color: skyblue;
+    background-color: var(--hawkes-blue);
+    color: var(--dodger-blue);
     border-radius: 5px;
     padding: 10px;
     width: 100%;

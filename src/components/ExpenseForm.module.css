@@ -1,19 +1,30 @@
 .firstRow {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex: 1;
+}
+
+.requiredInputs {
+    display: flex;
 }
 
 .formWrapper {
-    background-color: white;
+    background-color: var(--white);
     padding: 15px 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    height: 68px;
+    transition: .5s;
+}
+
+.formWrapperExpanded {
+    height: 116px;
 }
 
 .inputsWrapper {
+    align-items: flex-end;
     display: flex;
     flex: 1;
-    flex-direction: column;
 }
 
 .menuWrapper {
@@ -29,20 +40,35 @@
 .currencyWrap {
     display: flex;
     flex: 1;
-    height: 32px;
-    background-color: #ffffff;
-    border: 1px solid #7b7b93;
+    height: 38px;
+    margin-left: 10px;
+    background-color: var(--white);
+    border: 1px solid var(--silver);
     border-radius: 5px;
+    color: var(--cape-cod);
+}
+
+.currencyWrap:focus-within {
+    outline: 2px solid var(--dodger-blue);
 }
 
 .currentWrapInput {
     flex: 1;
+    border: none;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    color: var(--cape-cod);
 }
 
 .currencyCode {
     position: relative;
-    color: #7b7b93;
+    color: var(--silver);
     padding: 5px 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
 }
 
 .secondRow {
@@ -52,29 +78,86 @@
 
 .desWrapper {
     width: 100%;
-    height: 32px;
     border-radius: 5px;
+    border: 1px solid var(--silver);
+    color: var(--cape-cod);
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s;
+    height: 0;
+}
+
+.desWrapperExpanded {
+    margin-top: 10px;
+    height: 38px;
+    opacity: 1;
+    padding: 5px 8px;
+}
+
+.desWrapper:focus {
+    outline: 2px solid var(--dodger-blue);
 }
 
 .buttonStyle {
+    color: var(--dodger-blue);
     border-radius: 15px;
-    padding: 3px 13px;
-    background-color: aqua;
+    padding: 5px 13px;
+    background-color: var(--white);
     margin-bottom: 3px;
     display: flex;
     align-items: center;
+    border: none;
+    gap: 3px;
+    transition: .4s;
+}
+
+.buttonStyle:hover {
+    color: var(--azure-radiance);
+}
+
+.buttonDoneStyle {
+    color: var(--white);
+    border-radius: 15px;
+    padding: 5px 13px;
+    background-color: var(--dodger-blue);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-left: 10px;
+    transition: .4s;
+}
+
+.buttonDoneStyle:hover {
+    background: var(--azure-radiance);
+}
+
+.buttonDoneStyle:disabled {
+    background: var(--silver);
 }
 
 .beforeBottomStyle {
     border-radius: 15px;
     padding: 3px 13px;
-    background-color: white;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    border: none;
 }
 
 .beforeUpdateStyle {
     border-radius: 15px;
     padding: 3px 13px;
-    background-color: blue;
+    background-color: var(--dodger-blue);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    border: none;
+    transition: .4s;
+}
+
+.beforeUpdateStyle:hover {
+    background: var(--azure-radiance);
 }
 
 .buttonWrapper {
@@ -91,4 +174,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.searchPlaceholder,
+.singleValue,
+.menuList,
+.input {
+    color: var(--cape-cod);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.control {
+    border-radius: 5px;
+    min-width: 150px;
+    box-shadow: none;
+    border-color: var(--silver) !important;
+}
+
+.control:focus-within {
+    outline: 2px solid var(--dodger-blue) !important;
 }

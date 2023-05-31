@@ -1,13 +1,17 @@
 .mainWrapper {
-    background-color: skyblue;
+    background-color: var(--hawkes-blue);
     padding: 25px;
+    width: 50%;
+    border-radius: 5px;
 }
 
 .title {
     margin-bottom: 10px;
+    color: var(--cape-cod);
 }
 
 .descWrapper {
-    line-height: 1.5em;
+    line-height: 1.8;
     margin-bottom: 10px;
+    color: var(--cape-cod);
 }
